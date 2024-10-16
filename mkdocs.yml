@@ -1,0 +1,49 @@
+site_name: MTG Technical Writer Assessment
+site_url: https://sitename.example
+theme:
+  logo: assets/log.png
+  name: material
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/light-switch-off
+        name: Switch to Light Mode
+      primary: blue
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/light-switch
+        name: Switch to Dark Mode
+      primary: light blue
+      accent: deep orange
+  features:
+    - navigation.footer
+    
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+nav:
+ - 'index.md'
+ - 'SB-embedded-intro.md'
+ - 'user-guide.md'
+ - 'bonus.md'
+copyright: Copyright &copy; 2024 Nikolaos Stoupas for MTG
+
